@@ -1,0 +1,132 @@
+$eye-width : 100px;
+$eye-height: 100px;
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .visage{
+        display: flex;
+        align-items: center;
+    }
+    .ears-left{
+        border: 2px solid;
+        width: 60px;
+        height: 130px;
+        border-radius: 50px;
+        border-right: none;
+        background: #94665f;
+    }
+
+    .ears-right{
+        @extend .ears-left;
+        border-left: none;
+        border-right: 2px solid;
+    }
+    .head{
+        width: 430px;
+        height: 60vh;
+        background: #94665f;
+        padding: 10px;
+        padding-top: 20px;
+        border: 1px solid ;
+        border-radius: 50%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        z-index: 999;
+        .eyess{
+            display: flex;
+            
+            .sourcil{
+                border-top: 3px solid black;
+                border-radius: 50%;
+                width: $eye-width;
+                height: $eye-height;
+                
+            }
+            .left-eye{
+                margin-right: 49px;
+            }
+            .eye{
+                width: $eye-width;
+                height: $eye-height;
+                border-top-right-radius: 70px;
+                border-top-left-radius: 70px;
+                border-bottom-left-radius: 45px;
+                border-bottom-right-radius: 45px;
+                border: 1px solid black;
+                border-left: none;
+                border-right: none;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .iris{
+                    width:50px;
+                    height:50px;
+                    border-radius: 50%;
+                    background-image: radial-gradient(rgba(7, 7, 7, 0.61) 0%, transparent 10%, rgba(31, 31, 31, 0.884) 50%);
+                }
+            }
+        }
+
+        .noze{
+            border-radius:50px 50px 50px 50px / 100px 100px 50px 50px;
+            width:60px;
+            height:70px;
+            background: #61433f;
+            border: 1px solid;
+
+        }
+
+        .mouse{
+            margin-top: 40px;
+            border: 2px solid;
+            border-radius: 50%;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            
+        }
+
+
+    }
+
+    .cou{
+        height: 150px;
+        width: 300px;
+        border: 2px solid ;
+        margin-top: -100px;
+        border-bottom-left-radius: 45px;
+        border-bottom-right-radius: 45px;
+        background: #94665f;
+        z-index: 0;
+    }
+    .habit{
+        width: 650px;
+        height: 160px;
+        border: 5px solid;
+        background-color: rgb(70, 70, 70);
+        margin-top: -50px;
+        border-top-right-radius: 90px;
+        border-top-left-radius: 90px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        
+        
+
+        .circle{
+            width: 400px;
+            height: 150px;
+            margin-top: -30px;
+            background-color: aliceblue;
+            border-radius: 50%;
+        }
+    }
+}

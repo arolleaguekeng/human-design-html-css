@@ -1,145 +1,179 @@
-$eye-width : 100px;
-$eye-height: 100px;
+$eye-width : 120px;
+$eye-height: 65px;
 
-.container{
+.container {
+    background-color: #e5e5f7;
+    background-size: 56px 56px;
+    background-image: repeating-linear-gradient(to right, #0f236446, #0f236444 2.8000000000000003px, #e5e5f7 2.8000000000000003px, #e5e5f7);
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .cheveux{
-        height: 300px;
-        width: 500px;
-        background-color: black;
-        margin-bottom: -220px;
-        border-top-right-radius: 70px;
-                border-top-left-radius: 70px;
-    }
-    .visage{
-        display: flex;
-        align-items: center;
-    }
-    .ears-left{
-        border: 2px solid;
-        width: 60px;
-        height: 130px;
-        border-radius: 50px;
-        border-right: none;
-        background: #94665f;
-        border-left: 5px solid;
-        margin-right: -10px
-   
-    }
 
-    .ears-right{
-        @extend .ears-left;
-        border-left: none;
-        border-right: 2px solid;
-        border-right: 5px solid;
-        margin-left: -10px ;
-    }
-    .head{
-        width: 430px;
-        height: 60vh;
-        background: #94665f;
-        padding: 10px;
-        padding-top: 20px;
-        border: 1px solid ;
-        border-radius: 50%;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+    .card {
         display: flex;
-        z-index: 999;
-        .eyess{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 40px solid #0f2364;
+        padding: 10px;
+        padding-bottom: 0;
+        background-color: #e5e5f7;
+        border-radius: 20px;
+        background-image: url("foret.avif");
+        background-size: cover;
+        .cheveux {
+            height: 340px;
+            width: 500px;
+
+            background-color: black;
+            margin-bottom: -230px;
+            border-top-right-radius: 200px;
+            border-top-left-radius: 200px;
+            background-image: url("cheveu.avif");
+            background-repeat: no-repeat;
+        }
+
+        .visage {
             display: flex;
-            
-            .sourcil{
-                border-top: 3px solid black;
-                border-radius: 50%;
-                width: $eye-width;
-                height: $eye-height;
-                
-            }
-            .left-eye{
-                margin-right: 49px;
-            }
-            .eye{
-                width: $eye-width;
-                height: $eye-height;
-                border-top-right-radius: 70px;
-                border-top-left-radius: 70px;
-                border-bottom-left-radius: 45px;
-                border-bottom-right-radius: 45px;
-                border: 1px solid black;
-                border-left: none;
-                border-right: none;
-                background-color: white;
+            align-items: center;
+        }
+
+        .ears-left {
+            border: 2px solid;
+            width: 60px;
+            height: 130px;
+            border-radius: 50px;
+            border-right: none;
+            background: #94665f;
+            border-left: 5px solid;
+            margin-right: -10px
+        }
+
+        .ears-right {
+            @extend .ears-left;
+            border-left: none;
+            border-right: 2px solid;
+            border-right: 5px solid;
+            margin-left: -10px;
+        }
+
+        .head {
+            width: 430px;
+            height: 55vh;
+            background: #8a5e57;
+            padding: 10px;
+            padding-top: 20px;
+            border: 1px solid;
+            border-radius: 50%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            z-index: 999;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .eyess {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-    
-                .iris{
-                    width:50px;
-                    height:50px;
+
+                .sourcil {
+                    margin-top: 100px;
+                    border-top: 8px solid black;
                     border-radius: 50%;
-                    background-image: radial-gradient(rgba(7, 7, 7, 0.61) 0%, transparent 10%, rgba(31, 31, 31, 0.884) 50%);
+                    width: $eye-width;
+                    height: $eye-height;
+
+                }
+
+                .left-eye {
+                    margin-right: 49px;
+                }
+
+                .eye {
+                    width: $eye-width;
+                    height: $eye-height;
+                    border-top-right-radius: 70px;
+                    border-top-left-radius: 70px;
+                    border-bottom-left-radius: 45px;
+                    border-bottom-right-radius: 45px;
+                    border: 1px solid black;
+                    border-left: none;
+                    border-right: none;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .iris {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-image: url("iris.png");
+                        background-size: cover;
+                    }
                 }
             }
+
+            .noze {
+                border-radius: 50px 50px 50px 50px / 100px 100px 50px 50px;
+                width: 60px;
+                height: 70px;
+                background: #61433f;
+                border: 1px solid;
+
+            }
+
+            .mouse {
+                margin-top: 50px;
+                width: 100px;
+                height: 40px;
+                background-color: white;
+                border-radius: 50%;
+                border: 3px solid black;
+
+
+            }
+
+            /* key frame animate mouse */
+
+
         }
 
-        .noze{
-            border-radius:50px 50px 50px 50px / 100px 100px 50px 50px;
-            width:60px;
-            height:70px;
-            background: #61433f;
-            border: 1px solid;
-
-        }
-
-        .mouse{
-            margin-top: 40px;
-            border: 2px solid;
-            border-radius: 50%;
-            width: 100px;
-            height: 30px;
-            background-color: white;
-            
-        }
-
-
-    }
-
-    .cou{
-        height: 150px;
-        width: 300px;
-        border: 2px solid ;
-        margin-top: -100px;
-        border-bottom-left-radius: 45px;
-        border-bottom-right-radius: 45px;
-        background: #94665f;
-        z-index: 0;
-    }
-    .habit{
-        width: 650px;
-        height: 180px;
-        border: 1px solid;
-        background-color: rgb(70, 70, 70);
-        margin-top: -50px;
-        border-top-right-radius: 90px;
-        border-top-left-radius: 90px;
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        
-        
-
-        .circle{
-            width: 400px;
+        .cou {
             height: 150px;
-            margin-top: -30px;
-            background-color: aliceblue;
-            border-radius: 50%;
+            width: 300px;
+            border: 2px solid;
+            margin-top: -100px;
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+            background: #94665f;
+            z-index: 0;
+        }
+
+        .habit {
+            width: 700px;
+            height: 150px;
+            border: 1px solid;
+            background-color: #0f2364;
+            margin-top: -50px;
+            border-top-right-radius: 90px;
+            border-top-left-radius: 90px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            background-image: url("habit.jpg");
+
+
+
+            .circle {
+                width: 400px;
+                height: 150px;
+                margin-top: -30px;
+                background-color: #ef573d;
+                border-radius: 50%;
+            }
         }
     }
 }

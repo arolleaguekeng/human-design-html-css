@@ -8,6 +8,31 @@
   justify-content: center;
   flex-direction: column;
 }
+.container .copyright {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 110px;
+  margin-top: 27px;
+  font-size: 12px;
+  background-color: #0f2364;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 15px;
+  padding: 15px;
+}
+.container .copyright h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+  color: white;
+}
+.container .copyright a {
+  color: #7cef3d;
+  font-size: 25px;
+  font-weight: bold;
+}
 .container .card {
   display: flex;
   align-items: center;
